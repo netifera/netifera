@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.channelfactory.connect">
+	<implementation class="com.netifera.platform.internal.channel.tcpconnect.TCPConnectChannelFactory" />
+	<service>
+		<provide interface="com.netifera.platform.api.channels.IChannelFactory" />
+	</service>
+	
+	 <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+</component>

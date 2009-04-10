@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.2"?>
+
+<target name="netifera junit">
+
+   <targetJRE>
+      <execEnv>J2SE-1.5</execEnv>
+   </targetJRE>
+
+   <location path="${target_home}"/>
+
+   <content>
+      <plugins>
+         <plugin id="org.apache.commons.net"/>
+         <plugin id="org.apache.commons.net.source"/>
+         <plugin id="org.apache.oro"/>
+         <plugin id="org.apache.oro.source"/>
+         <plugin id="org.eclipse.tm.terminal"/>
+         <plugin id="org.eclipse.tm.terminal.telnet"/>
+         <plugin id="org.eclipse.ui.forms"/>
+         <plugin id="org.junit4"/>
+      </plugins>
+      <features>
+         <feature id="com.netifera.platform.core.feature"/>
+         <feature id="com.netifera.platform.ui.feature"/>
+         <feature id="com.netifera.platform.ui.product"/>
+         <feature id="org.eclipse.equinox"/>
+         <feature id="org.eclipse.rcp"/>
+      </features>
+      <extraLocations>
+         <location path="${project_loc:/com.netifera.platform.sdk}/target"/>
+      </extraLocations>
+   </content>
+
+   <implicitDependencies>
+      <plugin id="org.eclipse.tm.terminal.telnet"/>
+      <plugin id="db4o_osgi"/>
+      <plugin id="org.apache.oro"/>
+      <plugin id="org.eclipse.equinox.log"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.apache.commons.net"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.tm.terminal"/>
+   </implicitDependencies>
+
+</target>

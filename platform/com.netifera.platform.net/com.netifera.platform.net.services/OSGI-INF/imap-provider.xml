@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.imap-provider">
+	<implementation class="com.netifera.platform.net.services.examples.internal.IMAPProvider" />
+	<service>
+		<provide interface="com.netifera.platform.net.services.INetworkServiceProvider" />
+	</service>
+</component>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.tool-launcher">
+    <implementation class="com.netifera.platform.tools.internal.ToolLauncher" />
+     
+    <reference
+    	name="DISPATCHER"
+    	interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+    	bind="setDispatcher"
+    	unbind="unsetDispatcher"
+    />
+    
+    <reference
+        name="TASK_MANAGER"
+        interface="com.netifera.platform.api.tasks.ITaskManagerService"
+        bind="setTaskManagerService"
+        unbind="unsetTaskManagerService"
+    />
+    <reference
+        name="TOOL_PROVIDERS"
+        interface="com.netifera.platform.api.tools.IToolProvider"
+        bind="registerToolProvider"
+        unbind="unregisterToolProvider"
+        cardinality="0..n"
+        policy="dynamic"
+    />
+    <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+   
+    
+</component>

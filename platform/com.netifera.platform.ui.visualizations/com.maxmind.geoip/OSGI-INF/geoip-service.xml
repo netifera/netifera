@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="maxmind.geoip-service">
+	<implementation class="com.maxmind.geoip.internal.GeoIPService" />
+	<service>
+		<provide interface="com.netifera.platform.net.geoip.IGeoIPService" />
+	</service>
+	
+	 <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+	
+</component>

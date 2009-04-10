@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SSH UI Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.ssh.ui
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime;bundle-version="3.4.0"
+Service-Component: OSGI-INF/entity-action-provider.xml
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.tools,
+ com.netifera.platform.host.filesystem,
+ com.netifera.platform.host.filesystem.ui,
+ com.netifera.platform.host.terminal.ui,
+ com.netifera.platform.net.model,
+ com.netifera.platform.net.services,
+ com.netifera.platform.net.services.credentials,
+ com.netifera.platform.net.services.ssh,
+ com.netifera.platform.net.ssh.filesystem,
+ com.netifera.platform.tools.options,
+ com.netifera.platform.ui.actions,
+ com.netifera.platform.ui.api.actions,
+ com.netifera.platform.util.addresses,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.locators

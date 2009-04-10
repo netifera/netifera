@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.netifera.platform.net.wifi.feature"
+      label="WiFi Feature"
+      version="1.0.0"
+      provider-name="NETIFERA">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="com.netifera.platform.net.packets.feature" version="1.0.0"/>
+      <import feature="com.netifera.platform.net.feature" version="1.0.0"/>
+      <import plugin="com.netifera.platform.net.packets"/>
+      <import plugin="com.netifera.platform.util"/>
+   </requires>
+
+   <plugin
+         id="com.netifera.platform.net.wifi.packets"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.wifi.pcap"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.wifi.sniffing"
+         os="macosx"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.wifi.tools"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.wifi.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.wifi.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

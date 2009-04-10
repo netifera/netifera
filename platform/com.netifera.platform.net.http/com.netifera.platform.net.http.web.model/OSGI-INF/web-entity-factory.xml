@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.web-entity-factory">
+	<implementation class="com.netifera.platform.net.http.internal.web.model.WebEntityFactory"/>
+	<service>
+		<provide interface="com.netifera.platform.net.http.web.model.IWebEntityFactory" />
+	</service>
+	
+	<reference 
+		name="MODEL"
+		interface="com.netifera.platform.api.model.IModelService"
+		bind="setModelService"
+		unbind="unsetModelService"
+	/>
+
+	<reference 
+		name="NETWORK_ENTITY_FACTORY"
+		interface="com.netifera.platform.net.model.INetworkEntityFactory"
+		bind="setNetworkEntityFactory"
+		unbind="unsetNetworkEntityFactory"
+	/>
+</component>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.model">
+    <implementation class="com.netifera.platform.internal.model.ModelService" />
+    <service>
+        <provide interface="com.netifera.platform.api.model.IModelService" />
+    </service>
+    
+    <!-- 
+    
+    <reference 
+    	name="DB"
+    	interface="com.db4o.osgi.Db4oService"
+    	bind="registerDb4o"
+    	unbind="unregisterDb4o"
+    	/>
+    -->
+    
+  
+    	<reference
+		name="FILTER_EXTENSION"
+		interface="com.netifera.platform.api.model.layers.ILayerProvider" 
+		bind="registerLayerProvider"
+		unbind="unregisterLayerProvider"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+   <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    <reference 
+    	name="ADAPTER_SERVICE"
+    	interface="com.netifera.platform.api.model.IEntityAdapterService"
+    	bind="setEntityAdapterService"
+    	unbind="unsetEntityAdapterService"
+    	/>
+    
+</component>
+

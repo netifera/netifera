@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.server-detector">
+	<implementation class="com.netifera.platform.net.internal.services.detection.ServerDetectorService" />
+	<service>
+		<provide interface="com.netifera.platform.net.services.detection.IServerDetectorService" />
+	</service>
+	
+	<reference 
+		name="DETECTOR_PROVIDERS"
+		interface="com.netifera.platform.net.services.detection.INetworkServiceDetectorProvider"
+		bind="registerDetectorProvider"
+		unbind="unregisterDetectorProvider"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+</component>

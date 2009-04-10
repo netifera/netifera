@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netifera Core API
+Bundle-SymbolicName: com.netifera.platform.api
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.api.channels,
+ com.netifera.platform.api.daemon,
+ com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.events,
+ com.netifera.platform.api.iterables,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.model.layers,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.api.system,
+ com.netifera.platform.api.tasks,
+ com.netifera.platform.api.tools
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: netifera

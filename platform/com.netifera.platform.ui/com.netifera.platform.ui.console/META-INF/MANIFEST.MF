@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Console View Plug-in
+Bundle-SymbolicName: com.netifera.platform.ui.console;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.netifera.platform.ui.console.Activator
+Bundle-Vendor: netifera
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Import-Package: com.netifera.platform.api.log

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>com.netifera.platform.core.feature</name>
+	<comment></comment>
+	<projects>
+		<project>com.netifera.platform.api</project>
+		<project>com.netifera.platform.dispatcher</project>
+		<project>com.netifera.platform.kernel</project>
+		<project>com.netifera.platform.model</project>
+		<project>com.netifera.platform.tasks</project>
+		<project>com.netifera.platform.tools</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.pde.FeatureBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.pde.FeatureNature</nature>
+	</natures>
+</projectDescription>

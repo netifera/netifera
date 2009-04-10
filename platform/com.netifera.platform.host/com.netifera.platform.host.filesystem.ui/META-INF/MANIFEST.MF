@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FileSystem Ui Plug-in
+Bundle-SymbolicName: com.netifera.platform.host.filesystem.ui;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Activator: com.netifera.platform.host.internal.filesystem.ui.Activator
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: netifera
+Service-Component: OSGI-INF/entity-actions.xml
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.host.filesystem,
+ com.netifera.platform.model,
+ com.netifera.platform.ui.actions,
+ com.netifera.platform.ui.api.actions,
+ com.netifera.platform.ui.images,
+ com.netifera.platform.ui.util,
+ org.osgi.framework;version="1.3.0"
+Export-Package: com.netifera.platform.host.filesystem.ui,
+ com.netifera.platform.host.filesystem.ui.actions

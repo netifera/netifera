@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Processes Ui Plug-in
+Bundle-SymbolicName: com.netifera.platform.host.processes.ui;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.netifera.platform.host.internal.processes.ui.Activator
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/entity-actions.xml
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.host.processes,
+ com.netifera.platform.model,
+ com.netifera.platform.ui.actions,
+ com.netifera.platform.ui.api.actions,
+ com.netifera.platform.ui.images,
+ com.netifera.platform.ui.spaces,
+ com.netifera.platform.ui.util,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.ui;bundle-version="3.4.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0"

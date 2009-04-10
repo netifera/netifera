@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.probe-deployer">
+    <implementation class="com.netifera.platform.demo.ui.internal.UIProbeDeployer" />
+    <service>
+        <provide interface="com.netifera.platform.demo.IProbeDeployer" />
+    </service>
+    
+     <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    <reference
+    	name="CHANNEL_REGISTRY"
+    	interface="com.netifera.platform.api.channels.IChannelRegistry"
+    	bind="setChannelRegistry"
+    	unbind="unsetChannelRegistry"
+    />
+    
+    <reference
+    	name="PROBE_MANAGER"
+    	interface="com.netifera.platform.api.probe.IProbeManagerService"
+    	bind="setProbeManager"
+    	unbind="unsetProbeManager"
+    />
+    
+    <reference
+    	name="MODEL_SERVICE"
+    	interface="com.netifera.platform.api.model.IModelService"
+    	bind="setModel"
+    	unbind="unsetModel"
+    />
+    
+    <reference
+    	name="ENTITY_FACTORY"
+    	interface="com.netifera.platform.net.model.INetworkEntityFactory"
+    	bind="setNetworkEntityFactory"
+    	unbind="unsetNetworkEntityFactory"
+    />
+</component>

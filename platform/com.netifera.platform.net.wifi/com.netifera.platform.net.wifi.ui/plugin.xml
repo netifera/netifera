@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.netifera.platform.net.wifi.ui.views.WirelessView"
+            icon="icons/wifi.png"
+            id="com.netifera.platform.views.wifi"
+            name="Wireless Networks"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.netifera.platform.net.wifi.ui.PerspectiveFactory"
+            icon="icons/wifi.png"
+            id="com.netifera.platform.ui.perspectives.wifi"
+            name="Wireless">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.netifera.platform.net.wifi.ui.Startup">
+      </startup>
+   </extension>
+
+</plugin>

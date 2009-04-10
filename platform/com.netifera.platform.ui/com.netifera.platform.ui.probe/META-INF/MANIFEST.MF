@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Probe UI Plug-in
+Bundle-SymbolicName: com.netifera.platform.ui.probe;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.netifera.platform.ui.probe.Activator
+Bundle-Vendor: netifera
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/label-provider.xml,
+ OSGI-INF/action-providers.xml,
+ OSGI-INF/status-contribution.xml
+Import-Package: com.netifera.platform.api.events,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.model,
+ com.netifera.platform.ui.actions,
+ com.netifera.platform.ui.api.actions,
+ com.netifera.platform.ui.api.model,
+ com.netifera.platform.ui.images,
+ com.netifera.platform.ui.spaces,
+ com.netifera.platform.util.patternmatching
+Export-Package: com.netifera.platform.ui.probe.status;x-internal:=true

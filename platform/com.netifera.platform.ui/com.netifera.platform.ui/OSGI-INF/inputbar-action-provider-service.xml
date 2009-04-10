@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.inputbar-action-provider-service">
+	<implementation class="com.netifera.platform.ui.internal.InputBarActionProviderService" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.inputbar.IInputBarActionProviderService" />
+	</service>
+	
+	<reference 
+		name="ACTION_PROVIDERS"
+		interface="com.netifera.platform.ui.api.inputbar.IInputBarActionProvider"
+		bind="registerProvider"
+		unbind="unregisterProvider"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+	<reference
+        name="LOGGER"
+        interface="com.netifera.platform.api.log.ILogManager"
+        bind="setLogManager"
+        unbind="unsetLogManager"
+    />
+</component>

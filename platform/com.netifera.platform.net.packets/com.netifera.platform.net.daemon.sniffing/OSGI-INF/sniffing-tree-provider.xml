@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.sniffer-tree-provider">
+	<implementation class="com.netifera.platform.net.internal.daemon.sniffing.model.TreeLayerProvider" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.layers.ILayerProvider" />	
+	</service>
+</component>

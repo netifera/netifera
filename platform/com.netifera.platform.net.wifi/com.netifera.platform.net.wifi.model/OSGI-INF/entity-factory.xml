@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wireless-entity-factory">
+	<implementation class="com.netifera.platform.net.wifi.internal.model.WirelessEntityFactory" />
+	<service>
+		<provide interface="com.netifera.platform.net.wifi.model.IWirelessEntityFactory" />
+	</service>
+	
+	<reference
+		name="MODEL"
+		interface="com.netifera.platform.api.model.IModelService"
+		bind="setModelService"
+		unbind="unsetModelService"
+	/>
+</component>

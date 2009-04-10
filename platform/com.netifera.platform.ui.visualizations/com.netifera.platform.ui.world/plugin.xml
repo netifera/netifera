@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="com.netifera.platform.ui.category.General"
+            class="com.netifera.platform.ui.world.WorldView"
+            icon="icons/world.png"
+            id="com.netifera.platform.views.world"
+            name="World"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="com.netifera.platform.views.world"
+               minimized="false"
+               ratio="0.55"
+               relationship="bottom"
+               relative="com.netifera.platform.ui.views.Tasks">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

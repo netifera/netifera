@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.as-layer-provider">
+	<implementation class="com.netifera.platform.net.internal.routes.ASLayerProvider" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.layers.ILayerProvider" />
+	</service>
+	
+	<reference 
+		name="IP2AS_SERVICE"
+		interface="com.netifera.platform.net.routes.IIP2ASService"
+		bind="setIP2ASService"
+		unbind="unsetIP2ASService"
+	/>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.dns-provider">
+	<implementation class="com.netifera.platform.net.dns.internal.service.DNSProvider" />
+	<service>
+		<provide interface="com.netifera.platform.net.services.INetworkServiceProvider" />
+	</service>
+</component>

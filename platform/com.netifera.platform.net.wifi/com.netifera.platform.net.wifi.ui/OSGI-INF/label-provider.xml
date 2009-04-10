@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wireless-label-provider">
+	<implementation class="com.netifera.platform.net.wifi.ui.labels.WirelessLabelProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.model.IEntityLabelProvider" />
+	</service>
+</component>

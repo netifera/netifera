@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.http-tool-provider">
+    <implementation class="com.netifera.platform.net.http.internal.tools.ToolProvider" />
+    <service>
+        <provide interface="com.netifera.platform.api.tools.IToolProvider" />
+    </service>
+</component>

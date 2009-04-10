@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.network-tree-layer-provider">
+	<implementation class="com.netifera.platform.net.internal.ui.TreeLayerProvider" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.layers.ILayerProvider" />
+	</service>
+</component>

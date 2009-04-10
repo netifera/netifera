@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.sniffer.service-detector">
+	<implementation class="com.netifera.platform.net.daemon.sniffing.modules.detection.PassiveServiceDetector" />
+	<service>
+		<provide interface="com.netifera.platform.net.daemon.sniffing.ISniffingModule" />
+	</service>
+</component>

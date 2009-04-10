@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.networkentityadapter-provider">
+	<implementation class="com.netifera.platform.net.internal.model.NetworkEntityAdapterProvider" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.IEntityAdapterProvider" />
+	</service>
+</component>

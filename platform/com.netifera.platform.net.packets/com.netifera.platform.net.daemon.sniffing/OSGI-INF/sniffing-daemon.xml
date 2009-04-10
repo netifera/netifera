@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.daemon.sniffing" immediate="true">
+	<implementation class="com.netifera.platform.net.internal.daemon.sniffing.SniffingDaemon" />
+	<service>
+		<provide interface="com.netifera.platform.net.daemon.sniffing.ISniffingDaemonEx" />
+	</service>
+	
+	<reference
+		name="SNIFFING_MODULE"
+		interface="com.netifera.platform.net.daemon.sniffing.ISniffingModule"
+		bind="registerModule"
+		unbind="unregisterModule"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+	<reference
+		name="SNIFFING_ENGINE"
+		interface="com.netifera.platform.net.sniffing.ISniffingEngineService"
+		bind="setSniffingEngine"
+		unbind="unsetSniffingEngine"
+	/>
+	
+	<reference
+		name="SNIFFING_ENTITY_FACTORY"
+		interface="com.netifera.platform.net.daemon.sniffing.model.ISniffingEntityFactory"
+		bind="setEntityFactory"
+		unbind="unsetEntityFactory"
+	/>
+	
+	<reference
+		name="PROBE_MANAGER"
+		interface="com.netifera.platform.api.probe.IProbeManagerService"
+		bind="setProbeManager"
+		unbind="unsetProbeManager"
+	/>
+	
+	   <reference
+    	name="DISPATCHER"
+    	interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+    	bind="setDispatcher"
+    	unbind="unsetDispatcher"
+    />
+    
+      <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+   
+</component>

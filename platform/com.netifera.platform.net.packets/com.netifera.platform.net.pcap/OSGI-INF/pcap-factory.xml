@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.pcap-factory">
+	<implementation class="com.netifera.platform.net.internal.pcap.PacketCaptureFactoryService" />
+	<service>
+		<provide interface="com.netifera.platform.net.pcap.IPacketCaptureFactoryService" />
+	</service>
+	
+	<reference
+		name="SYSTEM"
+		interface="com.netifera.platform.api.system.ISystemService"
+		bind="setSystemService"
+		unbind="unsetSystemService"
+	/>
+    <reference
+        name="LOG_MANAGER"
+        interface="com.netifera.platform.api.log.ILogManager"
+        bind="setLogManager"
+        unbind="unsetLogManager"
+    />
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.system">
+	<implementation class="com.netifera.platform.internal.system.SystemService" />
+	<service>
+		<provide interface="com.netifera.platform.api.system.ISystemService" />
+	</service>
+	
+	 <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+</component>
+

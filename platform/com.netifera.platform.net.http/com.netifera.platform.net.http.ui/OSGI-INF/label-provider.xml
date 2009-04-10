@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="netifera.web-label-provider">
+	<implementation class="com.netifera.platform.net.http.internal.ui.EntityLabelProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.model.IEntityLabelProvider" />
+	</service>
+	<reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+</component>

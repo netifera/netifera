@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.logreader">
+    <implementation class="com.netifera.platform.kernel.internal.KernelLogReaderComponent"/>
+     <reference
+    	name="LOGREADER"
+    	interface="org.osgi.service.log.LogReaderService"
+    	bind="registerLogReader"
+    	unbind="unregisterLogReader"
+    	/>
+</component>

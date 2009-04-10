@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Filesystem Plug-in
+Bundle-SymbolicName: com.netifera.platform.host.filesystem
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/filesystem-factory.xml,
+ OSGI-INF/filesystem.xml
+Import-Package: com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.dispatcher,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: com.netifera.platform.host.filesystem,
+ com.netifera.platform.host.filesystem.probe

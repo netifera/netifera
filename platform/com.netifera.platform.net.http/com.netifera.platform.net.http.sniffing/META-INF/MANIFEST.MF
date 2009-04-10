@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HTTP Sniffing Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.http.sniffing
+Bundle-Version: 1.0.0
+Bundle-Activator: com.netifera.platform.net.http.internal.sniffing.Activator
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.net.daemon.sniffing,
+ com.netifera.platform.net.http.web.model,
+ com.netifera.platform.net.model,
+ com.netifera.platform.net.packets,
+ com.netifera.platform.net.packets.tcpip,
+ com.netifera.platform.net.pcap,
+ com.netifera.platform.net.sniffing,
+ com.netifera.platform.net.sniffing.stream,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.locators,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/http-sniffer.xml

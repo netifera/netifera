@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.dns-entity-action-provider">
+	<implementation class="com.netifera.platform.net.dns.internal.ui.EntityActionProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.actions.IEntityActionProvider" />
+	</service>
+</component>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wifi-sniffing-daemon-factory">
+	<implementation class="com.netifera.platform.net.wifi.internal.sniffing.daemon.WifiSniffingDaemonFactory"/>
+	<service>
+		<provide interface="com.netifera.platform.net.wifi.sniffing.IWifiSniffingDaemonFactory" />
+	</service>
+	
+	<reference
+		name="SNIFFING_DAEMON_FACTORY"
+		interface="com.netifera.platform.net.daemon.sniffing.ISniffingDaemonFactory"
+		bind="setSniffingDaemonFactory"
+		unbind="unsetSniffingDaemonFactory"
+	/>
+	<reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+</component>

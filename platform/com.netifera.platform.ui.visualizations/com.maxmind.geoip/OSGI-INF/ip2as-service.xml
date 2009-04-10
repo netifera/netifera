@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="maxmind.ip2as-service">
+	<implementation class="com.maxmind.geoip.internal.IP2ASService" />
+	<service>
+		<provide interface="com.netifera.platform.net.routes.IIP2ASService" />
+	</service>
+	
+	 <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+	
+</component>

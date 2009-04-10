@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.logging">
+	<implementation class="com.netifera.platform.log.internal.LogManager" />
+	<service>
+		<provide interface="com.netifera.platform.api.log.ILogManager" />
+	</service>
+</component>

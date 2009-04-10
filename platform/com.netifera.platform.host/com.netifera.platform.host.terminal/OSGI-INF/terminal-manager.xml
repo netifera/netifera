@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.terminal-manager">
+	<implementation class="com.netifera.platform.host.terminal.probe.TerminalManager"/>
+	
+	<reference
+		name="LOG_MANAGER"
+		interface="com.netifera.platform.api.log.ILogManager"
+		bind="setLogManager"
+		unbind="unsetLogManager"
+	/>
+	
+	<reference
+		name="DISPATCHER"
+		interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+		bind="setMessageDispatcher"
+		unbind="unsetMessageDispatcher"
+	/>
+	
+	<reference
+		name="PTY_FACTORY"
+		interface="com.netifera.platform.host.terminal.IPseudoTerminalFactory"
+		bind="setPtyFactory"
+		unbind="unsetPtyFactory"
+	/>
+</component>

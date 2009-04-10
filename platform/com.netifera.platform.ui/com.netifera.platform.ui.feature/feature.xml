@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.netifera.platform.ui.feature"
+      label="GUI  Feature"
+      version="1.0.0">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.ui" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="com.netifera.platform.api"/>
+      <import plugin="com.netifera.platform.model"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.osgi.services"/>
+      <import plugin="com.netifera.platform.tasks"/>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="com.netifera.platform.tools"/>
+      <import feature="com.netifera.platform.core.feature" version="1.0.0"/>
+      <import plugin="org.eclipse.core.runtime" version="3.1.0" match="compatible"/>
+      <import plugin="org.eclipse.jface" version="3.2.0" match="compatible"/>
+      <import plugin="com.ibm.icu"/>
+   </requires>
+
+   <plugin
+         id="com.netifera.platform.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.ui.api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.ui.application"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.ui.views.tasks"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.forms"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.ui.spaces"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.ui.probe"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.ui.console"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

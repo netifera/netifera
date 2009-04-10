@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.terminal-action-provider">
+	<implementation class="com.netifera.platform.host.internal.terminal.ui.pty.EntityActionProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.actions.IEntityActionProvider" />
+	</service>
+	
+    
+ 	<reference
+ 		name="PROBE_MANAGER"
+ 		interface="com.netifera.platform.api.probe.IProbeManagerService"
+ 		bind="setProbeManager"
+ 		unbind="unsetProbeManager"
+ 	/>
+ 	
+</component>

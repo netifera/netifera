@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.sniffer.arp">
+	<implementation class="com.netifera.platform.net.daemon.sniffing.modules.arp.ArpSniffer" />
+	<service>
+		<provide interface="com.netifera.platform.net.daemon.sniffing.ISniffingModule" />
+	</service>
+</component>

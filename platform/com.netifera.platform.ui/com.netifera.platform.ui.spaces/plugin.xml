@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.netifera.platform.ui.spaces.editors.SpaceEditor"
+            default="false"
+            icon="icons/space.png"
+            id="com.netifera.platform.editors.spaces"
+            contributorClass="com.netifera.platform.ui.spaces.editors.SpaceEditorActionBarContributor"
+            name="Space Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.netifera.platform.actionSet.spaces"
+            label="Spaces Action Set"
+            visible="true">
+         <action
+               class="com.netifera.platform.ui.spaces.actions.NewSpace"
+               definitionId="com.netifera.platform.commands.newSpace"
+               icon="icons/new_space.png"
+               id="com.netifera.platform.actions.newSpace"
+               label="New Space"
+               style="push"
+               toolbarPath="Normal">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.netifera.platform.commands.newSpace"
+            name="Open New Space">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.netifera.platform.commands.newSpace"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+T">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="com.netifera.platform.ui.category.general"
+            class="com.netifera.platform.ui.spaces.views.SpaceListView"
+            icon="icons/space_list.png"
+            id="com.netifera.platform.views.spaceList"
+            name="Space List"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="com.netifera.platform.views.spaceList"
+               minimized="false"
+               ratio="0.30"
+               relationship="fast">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="com.netifera.platform.ui.spaces.ElementFactory"
+            id="com.netifera.platform.spaceElementFactory">
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.netifera.platform.ui.internal.spaces.Startup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editorActions">
+   </extension>
+
+</plugin>

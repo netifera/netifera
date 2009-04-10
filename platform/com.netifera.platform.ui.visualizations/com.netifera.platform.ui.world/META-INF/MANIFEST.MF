@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: World UI Plug-in
+Bundle-SymbolicName: com.netifera.platform.ui.world;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui;bundle-version="3.4.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ gov.nasa.worldwind;bundle-version="1.0.0"
+Import-Package: com.netifera.platform.api.events,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.model.layers,
+ com.netifera.platform.net.geoip,
+ com.netifera.platform.ui.api.model,
+ com.netifera.platform.ui.images,
+ com.netifera.platform.ui.spaces,
+ com.netifera.platform.ui.spaces.actions
+Bundle-Activator: com.netifera.platform.ui.internal.world.Activator
+Bundle-ActivationPolicy: lazy
+Export-Package: com.netifera.platform.ui.world

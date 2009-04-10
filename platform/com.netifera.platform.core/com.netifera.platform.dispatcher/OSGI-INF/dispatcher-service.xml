@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.dispatcher">
+    <implementation class="com.netifera.platform.internal.dispatcher.MessageDispatcherService" />
+    <service>
+        <provide interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService" />
+    </service>
+    
+    <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    
+</component>
+

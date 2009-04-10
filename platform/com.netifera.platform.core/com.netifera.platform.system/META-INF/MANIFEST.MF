@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: System Plug-in
+Bundle-SymbolicName: com.netifera.platform.system
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/system.xml
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.api.system,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component;version="1.0.0",
+ org.osgi.util.tracker;version="1.3.0"
+Export-Package: com.netifera.platform.internal.system;x-internal:=true
+Bundle-ClassPath: library.jar,
+ .

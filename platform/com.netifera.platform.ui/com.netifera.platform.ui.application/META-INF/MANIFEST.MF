@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Application Plugin
+Bundle-SymbolicName: com.netifera.platform.ui.application;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.netifera.platform.ui.application.ApplicationPlugin
+Bundle-Vendor: netifera
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.osgi.services
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: com.netifera.platform.ui.application
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.api.tasks

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Probe Message Dispatcher Module
+Bundle-SymbolicName: com.netifera.platform.dispatcher
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.dispatcher,
+ com.netifera.platform.dispatcher.channels,
+ com.netifera.platform.internal.dispatcher;x-internal:=true
+Service-Component: OSGI-INF/dispatcher-service.xml,OSGI-INF/channel-registry.xml
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.channels,
+ com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.probe,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component;version="1.0.0"
+Bundle-Activator: com.netifera.platform.internal.dispatcher.DispatcherActivator
+DynamicImport-Package: *
+Bundle-Vendor: netifera

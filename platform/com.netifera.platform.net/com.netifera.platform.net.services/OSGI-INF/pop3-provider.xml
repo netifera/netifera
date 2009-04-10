@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.pop3-provider">
+	<implementation class="com.netifera.platform.net.services.examples.internal.POP3Provider" />
+	<service>
+		<provide interface="com.netifera.platform.net.services.INetworkServiceProvider" />
+	</service>
+</component>

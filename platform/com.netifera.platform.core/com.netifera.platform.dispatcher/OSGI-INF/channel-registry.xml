@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.channel-registry" immediate="true">
+	<implementation class="com.netifera.platform.internal.dispatcher.channels.ChannelRegistry"  />
+	<service>
+		<provide interface="com.netifera.platform.api.channels.IChannelRegistry" />
+	</service>
+	
+	<reference
+		name="DISPATCHER"
+		interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+		bind="setDispatcher"
+		unbind="unsetDispatcher"
+	/>
+	
+	 <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    
+	<reference 
+		name="CHANNEL_FACTORIES"
+		interface="com.netifera.platform.api.channels.IChannelFactory"
+		bind="registerChannelFactory"
+		unbind="unregisterChannelFactory"
+		cardinality="0..n"
+		policy="dynamic"
+		
+	/>
+	  
+</component>

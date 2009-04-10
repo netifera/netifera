@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wireless Model Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.wifi.model
+Bundle-Version: 1.0.0
+Bundle-Vendor: NETIFERA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.model.layers,
+ com.netifera.platform.model,
+ com.netifera.platform.net.model,
+ com.netifera.platform.util.addresses
+Export-Package: com.netifera.platform.net.wifi.model
+Service-Component: OSGI-INF/entity-factory.xml,
+ OSGI-INF/tree-provider.xml
+
+

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Network Service Detection Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.services.detection
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: com.netifera.platform.net.internal.services.detection;x-internal:=true,
+ com.netifera.platform.net.internal.services.detection.basic;x-internal:=true,
+ com.netifera.platform.net.services.detection
+Import-Package: com.netifera.platform.api.iterables,
+ com.netifera.platform.util,
+ com.netifera.platform.util.patternmatching
+Service-Component: OSGI-INF/server-detector.xml,
+ OSGI-INF/client-detector.xml,
+ OSGI-INF/basic-detector-provider.xml

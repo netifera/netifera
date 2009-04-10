@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wifi-pcap-factory">
+	<implementation class="com.netifera.platform.net.wifi.internal.pcap.WifiPacketCaptureFactory" />
+
+	<service>
+		<provide interface="com.netifera.platform.net.wifi.pcap.IWifiPacketCaptureFactory" />
+	</service>
+	
+	<reference
+		name="PCAP_FACTORY"
+		interface="com.netifera.platform.net.pcap.IPacketCaptureFactoryService"
+		bind="setPcapFactory"
+		unbind="unsetPcapFactory"
+	/>
+	
+	<reference
+		name="SYSTEM"
+		interface="com.netifera.platform.api.system.ISystemService"
+		bind="setSystemService"
+		unbind="unsetSystemService"
+	/>
+	
+	<reference
+        name="LOGGER"
+        interface="com.netifera.platform.api.log.ILogManager"
+        bind="setLogManager"
+        unbind="unsetLogManager"
+    />
+</component>

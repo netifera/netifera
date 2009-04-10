@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.socket-engine">
+	<implementation class="com.netifera.platform.net.sockets.internal.SocketEngineService" />
+	<service>
+		<provide interface="com.netifera.platform.net.sockets.ISocketEngineService" />
+	</service>
+	
+		
+	 <reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+	
+</component>

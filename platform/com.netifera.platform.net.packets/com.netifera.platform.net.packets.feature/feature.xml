@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.netifera.platform.net.packets.feature"
+      label="Network Packets Feature"
+      version="1.0.0"
+      provider-name="NETIFERA">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.osgi.services"/>
+      <import feature="com.netifera.platform.core.feature" version="1.0.0"/>
+      <import feature="com.netifera.platform.net.feature" version="1.0.0"/>
+      <import plugin="com.netifera.platform.util"/>
+      <import plugin="com.netifera.platform.api"/>
+   </requires>
+
+   <plugin
+         id="com.netifera.platform.net.packets"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.pcap"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.sniffing"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.daemon.sniffing"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.daemon.sniffing.modules"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.daemon.sniffing.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

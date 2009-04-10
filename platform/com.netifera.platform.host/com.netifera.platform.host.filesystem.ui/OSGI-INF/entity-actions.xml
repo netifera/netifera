@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.file-action-provider">
+	<implementation class="com.netifera.platform.host.filesystem.ui.probe.EntityActionProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.actions.IEntityActionProvider" />
+	</service>
+	
+	  <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    
+    
+ 	<reference
+ 		name="PROBE_MANAGER"
+ 		interface="com.netifera.platform.api.probe.IProbeManagerService"
+ 		bind="setProbeManager"
+ 		unbind="unsetProbeManager"
+ 	/>
+ 	<reference
+ 		name="FILESYSTEM_FACTORY"
+ 		interface="com.netifera.platform.host.filesystem.IFileSystemFactory"
+ 		bind="setFileSystemFactory"
+ 		unbind="unsetFileSystemFactory"
+ 	/>
+</component>

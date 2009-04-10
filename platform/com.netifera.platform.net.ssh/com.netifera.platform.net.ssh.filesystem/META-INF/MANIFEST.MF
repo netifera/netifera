@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SFTP Filesystem Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.ssh.filesystem
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.host.filesystem,
+ com.netifera.platform.net.services,
+ com.netifera.platform.net.services.credentials,
+ com.netifera.platform.net.services.ssh,
+ com.trilead.ssh2,
+ com.trilead.ssh2.sftp
+Export-Package: com.netifera.platform.net.ssh.filesystem

@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DNS Service Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.dns.service
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.net.services,
+ com.netifera.platform.net.sockets,
+ com.netifera.platform.util.addresses,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.locators,
+ org.osgi.service.component;version="1.0.0"
+Bundle-ClassPath: lib/dnsjava-2.0.5.jar,
+ .
+Export-Package: com.netifera.platform.net.dns.internal.service;x-internal:=true,
+ com.netifera.platform.net.dns.service,
+ com.netifera.platform.net.dns.service.client,
+ com.netifera.platform.net.dns.service.nameresolver,
+ org.xbill.DNS
+Service-Component: OSGI-INF/dns-provider.xml,
+ OSGI-INF/nameresolver.xml

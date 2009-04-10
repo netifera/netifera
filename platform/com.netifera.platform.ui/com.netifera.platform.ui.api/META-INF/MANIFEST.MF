@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Api Plug-in
+Bundle-SymbolicName: com.netifera.platform.ui.api
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.ui.api.actions,
+ com.netifera.platform.ui.api.inputbar,
+ com.netifera.platform.ui.api.model;uses:="com.netifera.platform.api.model,org.eclipse.swt.graphics"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.tools,
+ com.netifera.platform.api.model.layers,
+ org.eclipse.jface.action,
+ org.eclipse.swt.graphics
+Bundle-Vendor: netifera

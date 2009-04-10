@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="wireless.scanner" >
+	<implementation class="com.netifera.platform.net.wifi.tools.WirelessScanner" />
+	<service>
+		<provide interface="com.netifera.platform.net.wifi.sniffing.IWifiSniffer" />
+	</service>
+	
+	<reference
+		name="WIRELESS_ENTITY_FACTORY"
+		interface="com.netifera.platform.net.wifi.model.IWirelessEntityFactory"
+		bind="setWirelessEntityFactory"
+		unbind="unsetWirelessEntityFactory"
+	/>
+	<reference
+		name="NETWORK_ENTITY_FACTORY"
+		interface="com.netifera.platform.net.model.INetworkEntityFactory"
+		bind="setNetworkEntityFactory"
+		unbind="unsetNetworkEntityFactory"
+	/>
+</component>

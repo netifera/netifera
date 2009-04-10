@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.netifera.platform.net.dns.feature"
+      label="DNS Feature"
+      version="1.0.0"
+      provider-name="Netifera.com">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="com.netifera.platform.api"/>
+      <import plugin="com.netifera.platform.net.model"/>
+      <import plugin="com.netifera.platform.util"/>
+      <import plugin="org.eclipse.core.runtime" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="com.netifera.platform.ui.api"/>
+      <import feature="com.netifera.platform.net.ui.feature" version="1.0.0"/>
+      <import plugin="org.eclipse.ui" version="3.4.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.netifera.platform.net.dns.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.dns.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.dns.service"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.dns.tools"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.netifera.platform.net.dns.sniffing"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

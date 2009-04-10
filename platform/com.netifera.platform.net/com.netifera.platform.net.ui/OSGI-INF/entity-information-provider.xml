@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="netifera.net-info">
+	<implementation class="com.netifera.platform.net.internal.ui.EntityInformationProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.model.IEntityInformationProvider" />
+	</service>
+	
+	<reference 
+		name="GEOIP_SERVICE"
+		interface="com.netifera.platform.net.geoip.IGeoIPService"
+		bind="setGeoIPService"
+		unbind="unsetGeoIPService"
+		cardinality="0..1"
+	/>
+	
+	<reference 
+		name="IP2AS_SERVICE"
+		interface="com.netifera.platform.net.routes.IIP2ASService"
+		bind="setIP2ASService"
+		unbind="unsetIP2ASService"
+		cardinality="0..1"
+	/>
+	
+</component>

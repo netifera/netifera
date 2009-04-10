@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.sniffing-entity-factory">
+	<implementation class="com.netifera.platform.net.internal.daemon.sniffing.model.SniffingEntityFactory"/>
+	
+	<service>
+		<provide interface="com.netifera.platform.net.daemon.sniffing.model.ISniffingEntityFactory" />
+	</service>
+	
+	<reference 
+		name="MODEL"
+		interface="com.netifera.platform.api.model.IModelService"
+		bind="setModelService"
+		unbind="unsetModelService"
+	/>
+</component>

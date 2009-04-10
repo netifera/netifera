@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo Plug-in
+Bundle-SymbolicName: com.netifera.platform.demo
+Bundle-Version: 1.0.0
+Bundle-Activator: com.netifera.platform.demo.internal.Activator
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.iterables,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.api.tools,
+ com.netifera.platform.net.services.detection,
+ com.netifera.platform.util,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.patternmatching,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.3.3"
+Export-Package: com.netifera.platform.demo
+Service-Component: OSGI-INF/service-detector-provider.xml,
+ OSGI-INF/tool-provider.xml

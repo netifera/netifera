@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wifi-test-module">
+	<implementation class="com.netifera.platform.net.wifi.tools.TestWifiSniffer" />
+	<service>
+		<provide interface="com.netifera.platform.net.wifi.sniffing.IWifiSniffer" />
+	</service>
+</component>

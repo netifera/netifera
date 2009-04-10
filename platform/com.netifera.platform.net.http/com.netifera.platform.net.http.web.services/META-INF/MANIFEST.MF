@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HTTP Services Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.http.web.services
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.iterables,
+ com.netifera.platform.api.model,
+ com.netifera.platform.net.http.service,
+ com.netifera.platform.net.http.service.auth,
+ com.netifera.platform.net.http.web.model,
+ com.netifera.platform.net.model,
+ com.netifera.platform.net.services,
+ com.netifera.platform.net.services.auth,
+ com.netifera.platform.net.services.credentials,
+ com.netifera.platform.util.patternmatching,
+ org.osgi.service.component;version="1.0.0"
+Export-Package: com.netifera.platform.net.http.web.applications,
+ com.netifera.platform.net.http.web.applications.examples
+Service-Component: OSGI-INF/webappadapter-provider.xml,
+ OSGI-INF/webappdetector.xml

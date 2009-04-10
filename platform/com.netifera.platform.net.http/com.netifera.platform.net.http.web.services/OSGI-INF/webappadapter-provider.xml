@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.webappadapter-provider">
+	<implementation class="com.netifera.platform.net.http.internal.web.applications.WebApplicationAdapterProvider" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.IEntityAdapterProvider" />
+	</service>
+	
+	<reference 
+		name="APP_PROVIDERS"
+		interface="com.netifera.platform.net.http.web.applications.IWebApplicationProvider"
+		bind="registerProvider"
+		unbind="unregisterProvider"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+</component>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Packet Capture
+Bundle-SymbolicName: com.netifera.platform.net.pcap
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/pcap-factory.xml
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.api.system,
+ com.netifera.platform.net.packets,
+ com.netifera.platform.net.packets.decoders,
+ org.osgi.service.component;version="1.0.0"
+Export-Package: com.netifera.platform.net.internal.pcap;x-internal:=true,
+ com.netifera.platform.net.internal.pcap.linux;x-internal:=true,
+ com.netifera.platform.net.internal.pcap.osx;x-internal:=true,
+ com.netifera.platform.net.pcap,
+ com.netifera.platform.net.pcap.ex

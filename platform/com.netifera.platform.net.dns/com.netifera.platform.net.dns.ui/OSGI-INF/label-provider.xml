@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="netifera.dns-label-provider">
+	<implementation class="com.netifera.platform.net.dns.internal.ui.EntityLabelProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.model.IEntityLabelProvider" />
+		<provide interface="com.netifera.platform.ui.api.model.IEntityInformationProvider" />
+	</service>
+</component>

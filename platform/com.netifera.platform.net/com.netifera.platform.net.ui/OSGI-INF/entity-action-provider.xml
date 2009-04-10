@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.net-action-provider">
+	<implementation class="com.netifera.platform.net.internal.ui.EntityActionProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.actions.IEntityActionProvider" />
+	</service>
+
+	<reference 
+		name="SERVER_DETECTOR"
+		interface="com.netifera.platform.net.services.detection.IServerDetectorService"
+		bind="setServerDetector"
+		unbind="unsetServerDetector"
+	/>
+	
+	<reference 
+		name="ENTITY_FACTORY"
+		interface="com.netifera.platform.net.model.INetworkEntityFactory"
+		bind="setEntityFactory"
+		unbind="unsetEntityFactory"
+	/>
+	
+</component>

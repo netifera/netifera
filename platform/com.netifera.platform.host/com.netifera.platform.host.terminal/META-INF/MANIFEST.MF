@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Terminal Plug-in
+Bundle-SymbolicName: com.netifera.platform.host.terminal
+Bundle-Version: 1.0.0
+Bundle-Vendor: NETIFERA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/terminal-manager-factory.xml,
+ OSGI-INF/terminal-manager.xml,
+ OSGI-INF/pseudo-terminal-factory.xml
+Import-Package: com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.api.system,
+ com.netifera.platform.dispatcher
+Export-Package: com.netifera.platform.host.terminal,
+ com.netifera.platform.host.terminal.probe

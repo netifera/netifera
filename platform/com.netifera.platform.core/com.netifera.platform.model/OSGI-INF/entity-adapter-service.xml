@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.entity-adapter-service">
+	<implementation class="com.netifera.platform.internal.model.EntityAdapterService" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.IEntityAdapterService" />
+	</service>
+	
+	<reference 
+		name="ADAPTER_PROVIDERS"
+		interface="com.netifera.platform.api.model.IEntityAdapterProvider"
+		bind="registerEntityAdapterProvider"
+		unbind="unregisterEntityAdapterProvider"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+</component>

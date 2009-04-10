@@ -1,0 +1,6 @@
+build/stage
+build/db4o-lib
+build/jre
+build/org.eclipse.releng.basebuilder
+build/target
+platform/*/*/bin/

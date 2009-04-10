@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Routes Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.routes
+Bundle-Version: 1.0.0
+Bundle-Vendor: Netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.model.layers,
+ com.netifera.platform.net.model,
+ com.netifera.platform.util.addresses.inet
+Export-Package: com.netifera.platform.net.routes
+Service-Component: OSGI-INF/as-layer-provider.xml

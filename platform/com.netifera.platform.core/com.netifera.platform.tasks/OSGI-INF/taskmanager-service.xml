@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.taskmanager">
+    <implementation class="com.netifera.platform.tasks.internal.TaskManager" />
+    <service>
+        <provide interface="com.netifera.platform.api.tasks.ITaskManagerService" />
+    </service>
+ 
+    <reference
+    	name="DISPATCHER"
+    	interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+    	bind="setDispatcher"
+    	unbind="unsetDispatcher"
+    />
+    
+    <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    
+    <reference 
+		name="MODEL"
+		interface="com.netifera.platform.api.model.IModelService"
+		bind="setModelService"
+		unbind="unsetModelService"
+	/>
+	
+   
+</component>
+

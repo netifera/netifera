@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.netifera.platform.ui.product"
+      label="UI Product Feature"
+      version="1.0.0"
+      provider-name="NETIFERA">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="com.netifera.platform.core.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.core.source"
+         version="0.0.0"/>
+
+
+   <includes
+         id="com.netifera.platform.ui.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="com.netifera.platform.host.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.host.source"
+         version="0.0.0"/>
+
+   <includes
+         id="com.netifera.platform.net.feature"
+         version="0.0.0"
+         optional="true"/>
+   <includes
+         id="com.netifera.platform.net.source"
+         version="0.0.0"
+         optional="true"/>
+
+   <includes
+         id="com.netifera.platform.net.packets.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.net.packets.source"
+         version="0.0.0"/>
+
+   <includes
+         id="com.netifera.platform.net.dns.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.net.dns.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rcp"
+         version="0.0.0"/>
+
+
+   <includes
+         id="com.netifera.platform.net.http.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.net.http.source"
+         version="0.0.0"/>
+
+   <includes
+         id="com.netifera.platform.net.ui.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.net.ui.source"
+         version="0.0.0"/>
+
+ 
+   <includes
+         id="com.netifera.platform.net.ssh.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="com.netifera.platform.ui.visualizations.feature"
+         version="0.0.0"/>
+   <includes
+         id="com.netifera.platform.demo.feature"
+         version="0.0.0"/>
+         
+
+   <requires>
+      <import feature="com.netifera.platform.ui.feature" version="1.0.0"/>
+      <import feature="com.netifera.platform.core.feature" version="1.0.0"/>
+   </requires>
+
+</feature>

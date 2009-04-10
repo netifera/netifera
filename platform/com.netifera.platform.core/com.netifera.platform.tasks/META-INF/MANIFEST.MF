@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Task Manager Module
+Bundle-SymbolicName: com.netifera.platform.tasks
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.tasks,
+ com.netifera.platform.tasks.internal;x-internal:=true,
+ com.netifera.platform.tasks.messages
+Service-Component: OSGI-INF/taskmanager-service.xml
+Import-Package: com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.tasks
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: netifera
+

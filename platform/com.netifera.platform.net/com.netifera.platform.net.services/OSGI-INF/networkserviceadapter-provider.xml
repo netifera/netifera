@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.networkserviceadapter-provider">
+	<implementation class="com.netifera.platform.net.internal.services.NetworkServiceAdapterProvider" />
+	<service>
+		<provide interface="com.netifera.platform.api.model.IEntityAdapterProvider" />
+	</service>
+	
+	<reference 
+		name="SERVICE_PROVIDERS"
+		interface="com.netifera.platform.net.services.INetworkServiceProvider"
+		bind="registerProvider"
+		unbind="unregisterProvider"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+</component>

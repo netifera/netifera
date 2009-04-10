@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wifi-sniffing-engine">
+	<implementation class="com.netifera.platform.net.wifi.internal.sniffing.WifiSniffingEngine" />
+	<service>
+		<provide interface="com.netifera.platform.net.wifi.sniffing.IWifiSniffingEngine" />
+	</service>
+	
+	<reference
+        name="LOGGER"
+        interface="com.netifera.platform.api.log.ILogManager"
+        bind="setLogManager"
+        unbind="unsetLogManager"
+    />
+    
+    <reference
+    	name="WIFI_PCAP_FACTORY"
+    	interface="com.netifera.platform.net.wifi.pcap.IWifiPacketCaptureFactory"
+    	bind="setWifiCaptureFactory"
+    	unbind="unsetWifiCaptureFactory"
+    />
+    
+    <reference
+    	name="SNIFFING_ENGINE"
+    	interface="com.netifera.platform.net.sniffing.util.ISniffingEngineEx"
+    	bind="setSniffingEngine"
+    	unbind="unsetSniffingEngine"
+    />
+    
+</component>

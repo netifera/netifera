@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TCP Listen Channel Plug-in
+Bundle-SymbolicName: com.netifera.platform.channel.tcplisten
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Service-Component: OSGI-INF/channel.xml
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.channels,
+ com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.dispatcher.channels
+Export-Package: com.netifera.platform.channel.socket,
+ com.netifera.platform.channel.tcplisten

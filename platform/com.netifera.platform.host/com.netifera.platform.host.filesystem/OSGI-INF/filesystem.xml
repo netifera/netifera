@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.filesystem-manager">
+	<implementation class="com.netifera.platform.host.filesystem.probe.FileSystem" />
+	
+		<reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    	/>
+   <reference
+    	name="DISPATCHER"
+    	interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+    	bind="setDispatcher"
+    	unbind="unsetDispatcher"
+    />
+</component>

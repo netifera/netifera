@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TCP Connect-Back channel Plug-in
+Bundle-SymbolicName: com.netifera.platform.channel.tcpconnect
+Bundle-Version: 1.0.0
+Bundle-Vendor: NETIFERA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.channels,
+ com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.channel.socket
+Service-Component: OSGI-INF/channel.xml
+ 

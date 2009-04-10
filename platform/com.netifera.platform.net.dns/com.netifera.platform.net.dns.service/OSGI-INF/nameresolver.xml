@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.name-resolver">
+	<implementation class="com.netifera.platform.net.dns.internal.service.NameResolverService" />
+	<service>
+		<provide interface="com.netifera.platform.net.dns.service.nameresolver.INameResolver" />
+	</service>
+	
+	<reference
+    	name="SOCKET_ENGINE"
+    	interface="com.netifera.platform.net.sockets.ISocketEngineService"
+    	bind="setSocketEngine"
+    	unbind="unsetSocketEngine"
+    />
+    
+	<reference
+    	name="LOGGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+</component>

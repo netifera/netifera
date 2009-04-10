@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.process-action-provider">
+	<implementation class="com.netifera.platform.host.processes.probe.ui.EntityActionProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.actions.IEntityActionProvider" />
+	</service>
+	
+	  <reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    
+    
+    <reference
+    	name="PROCESS_MANAGER_FACTORY"
+    	interface="com.netifera.platform.host.processes.IProcessManagerFactory"
+    	bind="setProcessManagerFactory"
+    	unbind="unsetProcessManagerFactory"
+    />
+</component>

@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sniffing Engine Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.sniffing
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/sniffing-engine.xml
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.net.packets,
+ com.netifera.platform.net.packets.decoders,
+ com.netifera.platform.net.packets.link,
+ com.netifera.platform.net.packets.tcpip,
+ com.netifera.platform.net.pcap,
+ com.netifera.platform.net.pcap.ex,
+ com.netifera.platform.util.addresses.inet,
+ org.osgi.service.component;version="1.0.0"
+Export-Package: com.netifera.platform.net.sniffing,
+ com.netifera.platform.net.sniffing.stream,
+ com.netifera.platform.net.sniffing.util

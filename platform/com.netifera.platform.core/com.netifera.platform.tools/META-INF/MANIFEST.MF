@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tools Plug-in
+Bundle-SymbolicName: com.netifera.platform.tools
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.tools,
+ com.netifera.platform.tools.internal;x-internal:=true,
+ com.netifera.platform.tools.options
+Import-Package: com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.tasks,
+ com.netifera.platform.api.tools
+Service-Component: OSGI-INF/toollauncher-service.xml
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: netifera
+

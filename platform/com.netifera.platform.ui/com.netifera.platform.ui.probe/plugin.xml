@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.netifera.platform.ui.probe.views.ProbeListView"
+            category="com.netifera.platform.ui.category.general"
+            icon="icons/probe_list.png"
+            id="com.netifera.platform.views.probeList"
+            name="Probe List"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="com.netifera.platform.views.probeList"
+               minimized="false"
+               ratio="0.30"
+               relationship="fast">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.netifera.platform.viewActions.probe"
+            targetID="com.netifera.platform.views.probeList">
+         <action
+               class="com.netifera.platform.ui.probe.actions.NewProbeDelegate"
+               icon="icons/add.png"
+               id="com.netifera.platform.actions.newProbe"
+               label="Create a new Probe"
+               style="push"
+               toolbarPath="Normal/additions">
+         </action>
+      </viewContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.visualizations.tree">
+	<implementation class="com.netifera.platform.ui.internal.spaces.visualizations.SpaceTreeVisualizationProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.spaces.visualizations.ISpaceVisualizationProvider" />
+	</service>
+</component>

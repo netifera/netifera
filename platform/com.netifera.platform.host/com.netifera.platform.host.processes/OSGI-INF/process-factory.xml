@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.process-manager-factory">
+	<implementation class="com.netifera.platform.host.processes.probe.ProcessManagerFactory" />
+	<service>
+		<provide interface="com.netifera.platform.host.processes.IProcessManagerFactory" />
+	</service>
+	
+	<reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+    
+</component>

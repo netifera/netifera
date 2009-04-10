@@ -1,0 +1,114 @@
+<project name="Build specific targets and properties" default="noDefault">
+
+ <!-- The classpath needed for the enhancement process, including the application classpath -->
+
+        <path id="db4o.enhance.path">
+          <fileset dir="${user.dir}/build/db4o-lib">
+            <include name="**/*.jar"/>
+          </fileset>
+        </path>
+
+	<!-- Define enhancement tasks (from resource in db4otools.jar). -->
+	<typedef
+	  resource="instrumentation-def.properties"
+	  classpathref="db4o.enhance.path" />
+
+	<target name="enhance">
+
+	  <mkdir dir="${assemblyTempDir}/enhanced" />
+	  <mkdir dir="${assemblyTempDir}/empty" />
+
+
+
+          <db4o-instrument classTargetDir="${assemblyTempDir}/enhanced-bin" jarTargetDir="${assemblyTempDir}/enhanced">
+	    
+	    <classpath>
+              <fileset dir="${eclipse.plugins}">
+	        <include name="**/*.jar" />
+	      </fileset>
+	      <fileset dir="${user.dir}/build/db4o-lib">
+	        <include name="**/*.jar" />
+	      </fileset>
+	    </classpath>
+
+	     <!-- Fileset for original class files to be instrumented -->
+             <sources dir="${assemblyTempDir}/empty">
+	     </sources> 
+	     <jars dir="${eclipse.plugins}">
+                 <include name="com.netifera.platform.model_1.0.0.jar" />
+             </jars>
+
+	     <native-query-step />
+	  </db4o-instrument>
+
+
+          <copy file="${assemblyTempDir}/enhanced/com.netifera.platform.model_1.0.0.jar" todir="${eclipse.plugins}" overwrite="true" failonerror="false" /> 
+
+
+
+	</target>
+	<!-- =====================================================================
+	    
+	    The Following Properties are available in all targets:
+		 - eclipse.base : the base folder everything will be collected into
+		 - eclipse.plugins : the plugins folder
+		 - eclipse.features: the features folder
+		 - archiveFullPath : the full path of the final archive once it is created
+		 
+		 ===================================================================== -->
+		 
+	<!-- =====================================================================  -->
+	<!-- Called after each invocation of the gather.bin.parts target on the     -->
+	<!-- individual plugins and features.                                       -->
+	<!-- Available properties are:                                              -->
+	<!--   projectLocation: location of the project being gathered              -->
+	<!--   projectName: symbolic name with version (org.eclipse.foo_1.0.0.v123) -->
+	<!--   target.folder: the destination, eclipse/plugins or eclipse/features  -->
+	<!--                                                                        -->
+	<!-- The generated pattern is that plugins/features are gathered into the   -->
+	<!-- folder ${target.folder}/${projectName}                                 -->
+	<!-- =====================================================================  -->
+	<target name="gather.bin.parts">
+	</target>
+	
+	<!-- ===================================================================== -->
+	<!-- Called after invoking the gather.bin.parts targets for all plugins    -->
+	<!-- and features. Results exist as folders and have not yet been jarred.  -->
+	<!-- ===================================================================== -->
+	<target name="post.gather.bin.parts">
+	</target>
+
+	<!-- ===================================================================== -->
+	<!-- Called just prior to signing a jar                                    -->
+	<!-- In addititon to the properties listed above:						   -->
+	<!--    - source : plugins or features directory                           -->
+	<!--    - elementName: element being signed without .jar                   -->
+	<!--                   (eg "org.eclipse.foo_1.0.0"                         -->
+	<!-- ===================================================================== -->
+	<target name="pre.jarSigning">
+	</target>
+
+	<!-- ===================================================================== -->
+	<!-- Called after all plugins and features have been jarred                -->
+	<!-- (and potentially signed)                                              -->
+	<!-- ===================================================================== -->
+	<target name="post.jarUp">
+	</target>
+
+	<!-- ===================================================================== -->
+	<!-- Called just before the archive file is built                          -->
+	<!-- In addititon to the properties listed above:						   -->
+	<!--    - rootFolder : the folder containing the root files                -->
+	<!-- ===================================================================== -->
+	<target name="pre.archive">
+	  <antcall target="enhance"/> 
+	</target>
+	
+	<!-- ===================================================================== -->
+	<!-- Default target                                                        -->
+	<!-- ===================================================================== -->
+	<target name="noDefault">
+		<echo message="You must specify a target when invoking this file" />
+	</target>
+
+</project>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HTTP Model Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.http.web.model
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.model,
+ com.netifera.platform.api.tasks,
+ com.netifera.platform.net.model,
+ com.netifera.platform.net.sockets,
+ com.netifera.platform.util,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.locators,
+ com.netifera.platform.util.patternmatching
+Export-Package: com.netifera.platform.net.http.web.model
+Eclipse-RegisterBuddy: com.netifera.platform.model
+Service-Component: OSGI-INF/web-entity-factory.xml

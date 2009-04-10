@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.wifi-sniffing-daemon" immediate="true">
+	<implementation class="com.netifera.platform.net.wifi.internal.sniffing.daemon.WifiSniffingDaemon" />
+		
+	<reference
+		name="WIFI_MODULE"
+		interface="com.netifera.platform.net.wifi.sniffing.IWifiSniffer"
+		bind="registerModule"
+		unbind="unregisterModule"
+		cardinality="0..n"
+		policy="dynamic"
+	/>
+	
+	<reference
+    	name="DISPATCHER"
+    	interface="com.netifera.platform.api.dispatcher.IMessageDispatcherService"
+    	bind="setDispatcher"
+    	unbind="unsetDispatcher"
+    />
+    
+    <reference
+    	name="WIRELESS_SNIFFING_ENGINE"
+    	interface="com.netifera.platform.net.wifi.sniffing.IWifiSniffingEngine"
+    	bind="setSniffingEngine"
+    	unbind="unsetSniffingEngine"
+    />
+    
+    
+    <reference
+		name="SNIFFING_ENTITY_FACTORY"
+		interface="com.netifera.platform.net.daemon.sniffing.model.ISniffingEntityFactory"
+		bind="setSniffingEntityFactory"
+		unbind="unsetSniffingEntityFactory"
+	/>
+	
+	<reference
+		name="PROBE_MANAGER"
+		interface="com.netifera.platform.api.probe.IProbeManagerService"
+		bind="setProbeManager"
+		unbind="unsetProbeManager"
+	/>
+	
+	<reference
+		name="SNIFFING_DAEMON"
+		interface="com.netifera.platform.net.daemon.sniffing.ISniffingDaemonEx"
+		bind="setSniffingDaemon"
+		unbind="unsetSniffingDaemon"
+	/>
+	
+	<reference
+    	name="LOG_MANAGER"
+    	interface="com.netifera.platform.api.log.ILogManager"
+    	bind="setLogManager"
+    	unbind="unsetLogManager"
+    />
+	
+</component>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Wireless Pcap Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.wifi.pcap
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/wifi-factory.xml
+Import-Package: com.netifera.platform.api.log,
+ com.netifera.platform.api.system,
+ com.netifera.platform.net.packets,
+ com.netifera.platform.net.pcap,
+ com.netifera.platform.net.pcap.ex,
+ com.netifera.platform.net.wifi.decoders,
+ org.osgi.service.component;version="1.0.0"
+Export-Package: com.netifera.platform.net.wifi.internal.pcap;x-internal:=true,
+ com.netifera.platform.net.wifi.internal.pcap.osx;x-internal:=true,
+ com.netifera.platform.net.wifi.pcap

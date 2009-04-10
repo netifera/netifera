@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Net Services Plug-in
+Bundle-SymbolicName: com.netifera.platform.net.services
+Bundle-Version: 1.0.0
+Bundle-Vendor: netifera
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/networkserviceadapter-provider.xml,
+ OSGI-INF/imap-provider.xml
+Import-Package: com.netifera.platform.api.iterables,
+ com.netifera.platform.api.model,
+ com.netifera.platform.net.model,
+ com.netifera.platform.net.sockets,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.locators
+Export-Package: com.netifera.platform.net.internal.services,
+ com.netifera.platform.net.services,
+ com.netifera.platform.net.services.auth,
+ com.netifera.platform.net.services.credentials,
+ com.netifera.platform.net.services.examples,
+ com.netifera.platform.net.services.examples.internal;x-internal:=true

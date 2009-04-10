@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.entity-transfer">
+	<implementation class="com.netifera.platform.ui.dnd.EntityTransfer"/>
+	
+	<reference
+		name="MODEL_SERVICE"
+		interface="com.netifera.platform.api.model.IModelService"
+		bind="setModelService"
+		unbind="unsetModelService"
+	/>
+</component>

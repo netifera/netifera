@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Host"
+            id="Host">
+      </category>
+      
+      <view
+            allowMultiple="true"
+            restorable="false"
+            category="Host"
+            class="com.netifera.platform.host.filesystem.ui.FileSystemView"
+            icon="icons/folders.png"
+            id="com.netifera.platform.ui.views.FileSystem"
+            name="File System">
+      </view>
+   </extension>
+
+</plugin>

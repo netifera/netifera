@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netifera Model Service
+Bundle-SymbolicName: com.netifera.platform.model
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.internal.model;x-internal:=true,
+ com.netifera.platform.model
+Service-Component: OSGI-INF/model-service.xml,
+ OSGI-INF/probes-tree-provider.xml,
+ OSGI-INF/tags-layer-provider.xml,
+ OSGI-INF/entity-adapter-service.xml,
+ OSGI-INF/model-sync.xml
+Eclipse-BuddyPolicy: registered, global
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.dispatcher,
+ com.netifera.platform.api.events,
+ com.netifera.platform.api.iterables,
+ com.netifera.platform.api.log,
+ com.netifera.platform.api.model,
+ com.netifera.platform.api.model.layers,
+ com.netifera.platform.api.probe,
+ com.netifera.platform.api.tasks,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component;version="1.0.0"
+Bundle-Vendor: netifera
+DynamicImport-Package: *
+Bundle-ClassPath: lib/db4o-7.4.56.11413-java5.jar,
+ .
+

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Util Plug-in
+Bundle-SymbolicName: com.netifera.platform.util
+Bundle-Version: 1.0.0
+Export-Package: com.netifera.platform.util,
+ com.netifera.platform.util.addresses,
+ com.netifera.platform.util.addresses.inet,
+ com.netifera.platform.util.comparators,
+ com.netifera.platform.util.locators,
+ com.netifera.platform.util.patternmatching
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: com.netifera.platform.api.iterables
+Bundle-Vendor: netifera

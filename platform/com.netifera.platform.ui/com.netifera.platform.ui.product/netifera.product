@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.4"?>
+
+<product name="Netifera" id="com.netifera.platform.ui.application.product" application="com.netifera.platform.ui.application.application" useFeatures="true">
+
+   <aboutInfo>
+      <image path="/com.netifera.platform.ui.application/netifera_about.bmp"/>
+      <text>
+         netifera platform 1.0 BETA
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+      <linux>/com.netifera.platform.ui.product/config.ini</linux>
+      <macosx>/com.netifera.platform.ui.product/config.ini</macosx>
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Xms128M -Xmx512M -XX:PermSize=128M -XX:MaxPermSize=256M</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/com.netifera.platform.ui.application/icons/netifera_16.ico" i32="/com.netifera.platform.ui.application/icons/netifera_32.ico" i48="/com.netifera.platform.ui.application/icons/netifera_48.png" i64="/com.netifera.platform.ui.application/icons/netifera_64.png" i128="/com.netifera.platform.ui.application/icons/netifera_128.png"/>
+
+   <splash
+      location="com.netifera.platform.ui.application" />
+   <launcher name="netifera">
+      <macosx icon="/com.netifera.platform.ui.application/icons/netifera_128.icns"/>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="com.netifera.platform.ui.product" version="1.0.0"/>
+   </features>
+
+</product>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="netifera.probe-label-provider">
+	<implementation class="com.netifera.platform.ui.probe.ProbeEntityLabelProvider" />
+	<service>
+		<provide interface="com.netifera.platform.ui.api.model.IEntityLabelProvider" />
+	</service>
+</component>
