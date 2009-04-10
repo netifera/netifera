@@ -3,4 +3,5 @@ build/db4o-lib
 build/jre
 build/org.eclipse.releng.basebuilder
 build/target
+build/data
 platform/*/*/bin/
