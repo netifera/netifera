@@ -111,7 +111,7 @@ public class GeoIPService implements IGeoIPService {
 		if(installArea == null || !installArea.startsWith("file:")) {
 			return null;
 		}
-		return installArea.substring(5);
+		return installArea.substring(5) + "data/";
 	}
 	
 	private String getBasePathForEclipse() {

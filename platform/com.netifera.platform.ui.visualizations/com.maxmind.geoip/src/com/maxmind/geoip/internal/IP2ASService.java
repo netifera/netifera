@@ -109,7 +109,7 @@ public class IP2ASService implements IIP2ASService {
 		if(installArea == null || !installArea.startsWith("file:")) {
 			return null;
 		}
-		return installArea.substring(5);
+		return installArea.substring(5) + "data/";
 	}
 	
 	private String getBasePathForEclipse() {
