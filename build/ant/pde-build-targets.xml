@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project name="netifera.pde-build">
+
+	<property name="builder.project" value="com.netifera.platform.builder" />
+	<property name="basebuilderdir" value="${basedir}/build/buildpack/org.eclipse.releng.basebuilder" />
+	<property name="pde.build" value="org.eclipse.pde.build_3.4.0.v20080522" />
+	<property name="buildfile" value="${basebuilderdir}/plugins/${pde.build}/scripts/productBuild/productBuild.xml" />
+	<property name="launcher" value="${basebuilderdir}/plugins/org.eclipse.equinox.launcher.jar" />
+	<property name="builder" location="build/${builder.project}" />
+	<tstamp />
+
+	<target name="pde-build" depends="pde-build-all,pde-build-one"/>
+	
+	<!-- Build netifera for all platforms specified in build.properties -->
+
+	<target name="pde-build-all" if="build.all">
+		<echo>basedir: ${basedir}</echo>
+		<java jar="${launcher}" fork="true" failonerror="true">
+			<arg line="-application org.eclipse.ant.core.antRunner" />
+			<arg line="-buildfile ${buildfile}" />
+			<arg line="-Dbasedir=${basedir}" />
+			<arg line="-Dbuilder=${builder}" />
+			<arg line="-Dtimestamp=${DSTAMP}${TSTAMP}" />
+		</java>
+	</target>
+
+
+	<!-- Build netifera only for the current platform -->
+
+	<target name="pde-build-one" depends="pde-set-config" unless="build.all">
+		<echo>basedir: ${basedir}</echo>
+		<java jar="${launcher}" fork="true" failonerror="true">
+			<arg line="-application org.eclipse.ant.core.antRunner" />
+			<arg line="-buildfile ${buildfile}" />
+			<arg line="-Dbasedir=${basedir}" />
+			<arg line="-Dbuilder=${builder}" />
+			<arg line="-Dtimestamp=${DSTAMP}${TSTAMP}" />
+			<arg line="-Dconfigs=${build.config}" />
+		</java>
+	</target>
+
+	<!-- Set an appropriate build config to only build netifera for the current platform -->
+
+	<target name="pde-set-config" unless="build.all">
+		<condition property="build.config" value="linux,gtk,x86">
+			<os name="Linux"/>
+		</condition>
+
+		<condition property="build.config" value="macosx,carbon,x86">
+			<os name="Mac OS X"/>
+		</condition>
+
+		<condition property="build.config" value="win32,win32,x86">
+			<os family="windows"/>
+		</condition>
+	</target>
+    
+</project>

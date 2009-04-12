@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="netifera.setup">
+	<target name="setup">
+		<copy todir="build/stage/features" >
+			<fileset dir="platform" >
+				<include name="**/*.feature/**" />
+				<include name="**/*.ui.product/**" /> 
+			</fileset>
+			<regexpmapper from="^(.+?)/(.+)" to="\2" /> 
+		</copy>
+
+		<copy todir="build/stage/plugins">
+			<fileset dir="platform">
+				<exclude name="**/*.feature/**" />
+				<exclude name="**/*.product/**" />
+				<exclude name="**/*.target/**" />
+				<include name="**/**" />
+			</fileset>
+			<regexpmapper from="^(.+?)/(.+)" to="\2" />
+		</copy>
+
+	</target>
+
+	<target name="clean">
+		<delete dir="build/stage" />
+	</target>
+
+</project>

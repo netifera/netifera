@@ -3,7 +3,7 @@
  <!-- The classpath needed for the enhancement process, including the application classpath -->
 
         <path id="db4o.enhance.path">
-          <fileset dir="${user.dir}/build/db4o-lib">
+          <fileset dir="${user.dir}/build/buildpack/db4o-lib">
             <include name="**/*.jar"/>
           </fileset>
         </path>
@@ -26,7 +26,7 @@
               <fileset dir="${eclipse.plugins}">
 	        <include name="**/*.jar" />
 	      </fileset>
-	      <fileset dir="${user.dir}/build/db4o-lib">
+	      <fileset dir="${user.dir}/build/buildpack/db4o-lib">
 	        <include name="**/*.jar" />
 	      </fileset>
 	    </classpath>
