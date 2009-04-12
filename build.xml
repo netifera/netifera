@@ -18,6 +18,9 @@
     <property name="builder" location="build/${builder.project}" />
 	<tstamp />
 
+	<target name="clean">
+		<delete dir="build/stage"/>
+	</target>
 	
 	<target name="setup">
 		<copy todir="build/stage/features" >
