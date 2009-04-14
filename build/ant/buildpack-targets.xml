@@ -7,8 +7,11 @@
 	<!-- Downloaded buildpacks are stored here -->
 	<property name="buildpack.path.archives" location="build/archives" />
 
+	<!-- Name of the buildpack file for the required version -->
+	<property name="buildpack.filename" value="buildpack-${buildpack.version}.tar.bz2" />
+
 	<!-- Buildpack archive name for the buildpack.version property defined in master build.xml -->
-	<property name="buildpack.archive" location="${buildpack.path.archives}/buildpack-${buildpack.version}.tar.bz2" />
+	<property name="buildpack.archive" location="${buildpack.path.archives}/${buildpack.filename}" />
 
 	<!-- If the version file is found, then the correct buildpack is installed -->
 	<available file="${buildpack.path.version}/${buildpack.version}" property="buildpack.installed" />
@@ -28,8 +31,15 @@
 	<!-- Download the buildpack archive if it is not found in the build/archives directory -->
 
 	<target name="buildpack-download" unless="buildpack.available">
-		<echo message="buildpack-download" />
-		<fail message="not implemented." />
+		<property name="buildpack.source" value="http://netifera.com/buildpacks" />
+		<property name="buildpack.url" value="${buildpack.source}/${buildpack.filename}" />
+		<echo>
+			The build system will now download a buildpack from ${buildpack.url}
+			
+			Depending on the speed of your connection this may take a few minutes.
+		</echo>
+		<get src="${buildpack.url}" dest="${buildpack.archive}.tmp" />
+		<move file="${buildpack.archive}.tmp" tofile="${buildpack.archive}" />
 	</target>
 	
 	<!-- Calculate the checksum for the buildpack archive and call target to abort if it is invalid -->
