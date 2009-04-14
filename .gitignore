@@ -2,3 +2,4 @@ build/stage
 build/buildpack
 build/archives/*.bz2
 platform/*/*/bin/
+netifera
