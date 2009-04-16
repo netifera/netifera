@@ -12,8 +12,7 @@ import com.netifera.platform.channel.tcplisten.ITCPListenServer;
 
 
 public class TCPListenChannelServer implements ITCPListenServer {
-	private static final int PORT_UNINITIALIZED = -1;
-	private int listenPort = PORT_UNINITIALIZED;
+	private InetSocketAddress listenAddress;
 	private ServerSocket listenSocket;
 
 	private final Thread acceptThread;
@@ -61,13 +60,13 @@ public class TCPListenChannelServer implements ITCPListenServer {
 	
 
 	public void startListening() throws IOException {
-		if(listenPort == PORT_UNINITIALIZED) {
-			throw new IOException("TCP Listen Channel Server has not been configured with a port to listen on");
+		if(listenAddress == null) {			
+			throw new IOException("TCP Listen Channel Server has not been configured with an address to listen on");
 		}
 		
 		listenSocket = new ServerSocket();
 		listenSocket.setReuseAddress(true);
-		listenSocket.bind(new InetSocketAddress(listenPort));
+		listenSocket.bind(listenAddress);
 		acceptThread.start();
 	}
 
@@ -75,12 +74,10 @@ public class TCPListenChannelServer implements ITCPListenServer {
 		acceptThread.interrupt();		
 	}
 
-	public void setListenPort(int port) {
-		if(port < 1 || port > 0xffff) {
-			throw new IllegalArgumentException("Listen port must be in the range 1-65535 inclusive");
-		}
-		this.listenPort = port;		
+	public void setListenAddress(InetSocketAddress address) {
+		this.listenAddress = address;
 	}
+	
 
 
 }

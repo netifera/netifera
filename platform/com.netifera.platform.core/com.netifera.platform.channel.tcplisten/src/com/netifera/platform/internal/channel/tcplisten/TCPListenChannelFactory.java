@@ -30,18 +30,23 @@ public class TCPListenChannelFactory implements IChannelFactory {
 	
 	public IChannelServer createServer(IServerDispatcher serverDispatcher, String config) {
 		final int listenPort = configParser.stringToPort(config);
-		if(listenPort == ConfigParser.INVALID_PORT) 
+		if(listenPort != ConfigParser.INVALID_PORT) {
+			return createConfiguredServer(new InetSocketAddress(listenPort), serverDispatcher);
+		}
+		
+		final InetSocketAddress listenAddress = configParser.configToAddress(config);
+		if(listenAddress == null)
 			return null;
 		
-		return createConfiguredServer(listenPort, serverDispatcher);
+		return createConfiguredServer(listenAddress, serverDispatcher);
 		
 	}
 	
 	
 	
-	private IChannelServer createConfiguredServer(int port, IServerDispatcher serverDispatcher) {
+	private IChannelServer createConfiguredServer(InetSocketAddress listenAddress, IServerDispatcher serverDispatcher) {
 		final TCPListenChannelServer server = new TCPListenChannelServer(serverDispatcher, logger);
-		server.setListenPort(port);
+		server.setListenAddress(listenAddress);
 		return server;
 	}
 	public String getType() {
