@@ -2,29 +2,36 @@
 <project name="netifera.unpack">
 
 	<property name="build.output" location="build/stage/I.NetiferaBuild" />
-	
+	<property name="unpack.dir" location="build/unpack-tmp" />
 	<!-- If running in default 'single build' mode, unpack the final archive so it is ready to run -->
 
-	<target name="unpack-archive" depends="choose-archive,unpack-setup,unpack-choice" unless="build.all" />
+	<target name="unpack-archive" depends="choose-archive,unpack-setup,unpack-and-move" unless="build.all" />
 
-	<target name="unpack-choice" depends="unpack-osx,unpack-linux,unpack-win32" unless="build.all" />
+	<target name="unpack-and-move" depends="unpack-osx,unpack-linux,unpack-win32" unless="build.all">
+		<chmod file="${unpack.dir}/netifera/probe/run_probe.sh" perm="755" />
+		<move file="${unpack.dir}/netifera" tofile="netifera-build" />
+		<delete dir="${unpack.dir}" />
+	</target>
 
 	<!-- Delete a previously unpacked netifera package if it exists -->
 
 	<target name="unpack-setup">
-		<delete dir="netifera" />
+		<delete dir="netifera-build" />
+		<delete dir="${unpack.dir}" />
+		<mkdir dir="${unpack.dir}" />
 	</target>
 
 	<!-- One target for each operating system -->
 
 	<target name="unpack-osx" if="unpack.osx">
-		<unzip src="${build.output}/NetiferaBuild-macosx.carbon.x86.zip" dest="${basedir}" />
-		<chmod file="netifera/netifera.app/Contents/MacOS/netifera" perm="755" />
+		<unzip src="${build.output}/NetiferaBuild-macosx.carbon.x86.zip" dest="${unpack.dir}" />
+		<chmod file="${unpack.dir}/netifera/netifera.app/Contents/MacOS/netifera" perm="755" />
 	</target>
 
 	<target name="unpack-linux" if="unpack.linux">
 		<unzip src="${build.output}/NetiferaBuild-linux.gtk.x86.zip" dest="${basedir}" />
-		<chmod file="netifera/netifera" perm="755" />
+		<chmod file="${unpack.dir}/netifera/netifera" perm="755" />
+		<chmod file="${unpack.dir}/netifera/jre/bin/java" perm="755" />
 	</target>
 
 	<target name="unpack-win32" if="unpack.win32">
