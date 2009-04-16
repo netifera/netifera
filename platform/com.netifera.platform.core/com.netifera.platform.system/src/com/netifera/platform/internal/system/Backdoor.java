@@ -79,7 +79,11 @@ public class Backdoor {
 		if (installArea == null || !installArea.startsWith("file:")) {
 			return null;
 		}
-		return installArea.substring(5);
+		final String retValue = installArea.substring(5);
+		if(retValue.endsWith("plugins"))
+			return retValue.substring(0, retValue.length() - 7);
+		else
+			return retValue;
 	}
 
 	private String getBasePathForEclipse() {
