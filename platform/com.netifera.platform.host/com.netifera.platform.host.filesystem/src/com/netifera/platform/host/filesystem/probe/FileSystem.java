@@ -17,19 +17,25 @@ import com.netifera.platform.host.filesystem.File;
 import com.netifera.platform.host.filesystem.IFileSystem;
 
 public class FileSystem {
+	private final static String PELUDO_ESCAPE_PATH = "/peludo/osfs/./";
 	private ILogger logger;
 	private IFileSystem fileSystem;
-	
+	private final String rootPrefix;
 	public FileSystem() {
 		fileSystem = new LocalFileSystem();
+		if(System.getProperty("com.netifera.peludofs") != null) {
+			rootPrefix = PELUDO_ESCAPE_PATH;
+		} else {
+			rootPrefix = "";
+		}
 	}
 	
 	private void getDirectoryListing(IMessenger messenger, GetDirectoryListing message) {
 		
 		try {
-			File[] files = fileSystem.getDirectoryList("/peludo/osfs/./" + message.getDirectoryPath());
+			File[] files = fileSystem.getDirectoryList(rootPrefix + message.getDirectoryPath());
 			for(File f : files) {
-				if(f.getAbsolutePath().startsWith("/peludo/osfs/.")) {
+				if(f.getAbsolutePath().startsWith(PELUDO_ESCAPE_PATH)) {
 					String realPath = f.getAbsolutePath().substring(14);
 					f.setPath(realPath);
 				}
