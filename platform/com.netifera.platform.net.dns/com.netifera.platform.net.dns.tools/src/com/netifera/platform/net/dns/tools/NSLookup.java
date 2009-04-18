@@ -66,7 +66,7 @@ public class NSLookup implements ITool {
 	}
 	
 	private boolean getNS() {
-		context.setStatus("Quering for authoritative name servers");
+		context.setStatus("Querying for authoritative name servers");
 		Lookup lookup = new Lookup(domain, Type.NS);
 		lookup.setResolver(resolver.getExtendedResolver());
 		lookup.setSearchPath((Name[])null);
